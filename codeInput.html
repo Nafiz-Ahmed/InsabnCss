@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CodeInput</title>
+    <style>
+      .codeInput-container {
+        line-height: 1.5rem;
+        margin: 0px;
+        padding: 0px;
+        border: 0px;
+        box-sizing: border-box;
+        text-align: center;
+      }
+      .codeInput-container {
+        line-height: 1.5rem;
+        margin: 0px;
+        padding: 0px;
+        border: 0px;
+        box-sizing: border-box;
+        text-align: center;
+        border: 0;
+      }
+
+      .code-input {
+        font-style: inherit;
+        font-variant: inherit;
+        font-weight: inherit;
+        font-stretch: inherit;
+        font-family: inherit;
+        background-color: rgb(255, 255, 255);
+        border: 1px solid rgb(164, 167, 181);
+        transition: all 0.1s linear 0s, padding 0s ease 0s, border 0s ease 0s;
+        display: inline-block;
+        padding: 0px 1rem;
+        width: 56px;
+        height: 56px;
+        border-radius: 20px;
+        line-height: 2.5rem;
+        color: rgb(42, 48, 57);
+        font-size: 28px;
+        box-sizing: border-box;
+        margin: 0px 6px 12px;
+        text-align: center;
+      }
+      .code-input:focus,
+      .code-input:active {
+        outline: 0px;
+        padding: 0px 0.9375rem;
+        border: 2px solid rgb(1, 182, 245);
+        background-color: rgb(255, 255, 255);
+        box-shadow: rgb(1, 182, 245) 0px 0px 2px;
+      }
+    </style>
+  </head>
+  <body>
+    <fieldset class="codeInput-container" id="codeinput-1">
+      <legend>Enter your Code</legend>
+      <input pattern="\d*" maxlength="1" class="code-input" value="" /><input
+        tabindex="-1"
+        pattern="\d*"
+        maxlength="1"
+        class="code-input"
+        value=""
+      /><input
+        tabindex="-1"
+        pattern="\d*"
+        maxlength="1"
+        class="code-input"
+        value=""
+      /><input
+        tabindex="-1"
+        pattern="\d*"
+        maxlength="1"
+        class="code-input"
+        value=""
+      />
+    </fieldset>
+  </body>
+</html>

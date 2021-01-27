@@ -1,0 +1,139 @@
+.pagination {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.pag-button-shadow {
+  font-style: inherit;
+  font-variant: inherit;
+  font-stretch: inherit;
+  font-family: inherit;
+  padding: 0px;
+  transition: color 0.1s linear 0s;
+  cursor: pointer;
+  height: 2rem;
+  width: 2rem;
+  border-radius: 12rem;
+  font-weight: bold;
+  font-size: 0.875rem;
+  line-height: 0;
+  display: flex;
+  -webkit-box-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  justify-content: center;
+  background-color: rgb(255, 255, 255);
+  outline: none;
+  margin: 0px;
+  overflow: visible;
+  text-transform: none;
+  appearance: button;
+  box-sizing: border-box;
+  color: rgb(63, 73, 84);
+  z-index: 0;
+  box-shadow: rgba(82, 95, 127, 0.15) 0px 0px 4px 0px;
+  border: 1px solid transparent;
+}
+.pag-button {
+  font-style: inherit;
+  font-variant: inherit;
+  font-stretch: inherit;
+  font-family: inherit;
+  padding: 0px;
+  transition: color 0.1s linear 0s;
+  cursor: pointer;
+  height: 2rem;
+  width: 2rem;
+  border-radius: 12rem;
+  font-weight: bold;
+  font-size: 0.875rem;
+  line-height: 0;
+  display: flex;
+  -webkit-box-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  justify-content: center;
+  background-color: rgb(255, 255, 255);
+  border: 1px solid rgb(215, 217, 226);
+  outline: none;
+  margin: 0px;
+  overflow: visible;
+  text-transform: none;
+  appearance: button;
+  box-sizing: border-box;
+  color: rgb(63, 73, 84);
+  z-index: 0;
+}
+.pag-button:focus,
+.pag-button:active {
+  box-shadow: rgb(1, 182, 245) 0px 0px 2px;
+  background-color: rgb(255, 255, 255);
+  outline: none;
+}
+.pag-button-shadow:focus,
+.pag-button-shadow:active {
+  box-shadow: rgb(1, 182, 245) 0px 0px 2px;
+  background-color: rgb(255, 255, 255);
+  outline: none;
+}
+.pag-button:focus,
+.pag-button:active,
+.pag-button:visited {
+  font-size: 1rem;
+  text-decoration: none;
+  color: rgb(42, 48, 57);
+  background-color: rgb(239, 241, 245);
+  z-index: 100;
+  outline: 0px;
+}
+.pag-button-shadow:focus,
+.pag-button-shadow:active,
+.pag-button-shadow:visited {
+  font-size: 1rem;
+  text-decoration: none;
+  color: rgb(42, 48, 57);
+  background-color: rgb(239, 241, 245);
+  z-index: 100;
+  outline: 0px;
+}
+.pag-number > button {
+  border-radius: 0px;
+  margin-left: -1px;
+}
+.pag-number:nth-child(2) > button {
+  margin-left: 0.5rem;
+  border-radius: 100px 0px 0px 100px;
+}
+.pag-number:nth-last-child(2) > button {
+  margin-right: 0.5rem;
+  border-radius: 0px 100px 100px 0px;
+}
+
+.pag-num-shadow-container {
+  display: flex;
+  box-shadow: rgba(82, 95, 127, 0.15);
+  border-radius: 100px;
+  margin-left: 0.5rem;
+  margin-right: 0.5rem;
+}
+.pag-number-shadow:nth-child(1) > button {
+  border-radius: 100px 0 0 100px;
+}
+.pag-number-shadow:nth-last-child(1) > button {
+  border-radius: 0 100px 100px 0;
+}
+.pag-number-shadow > button {
+  border-radius: 0px;
+  margin-left: -1px;
+}
+.pag-button:hover {
+  background-color: rgb(246, 247, 249);
+  color: rgb(42, 48, 57);
+}
+.pag-button-shadow:hover {
+  background-color: rgb(246, 247, 249);
+  color: rgb(42, 48, 57);
+}

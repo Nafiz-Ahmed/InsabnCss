@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Tab</title>
+    <style>
+      .tab {
+        display: flex;
+        -webkit-box-align: center;
+        align-items: center;
+        overflow: auto hidden;
+        -webkit-box-pack: start;
+        justify-content: flex-start;
+        width: 100%;
+        box-sizing: border-box;
+        padding: 0px 0.75rem;
+      }
+      .tab-list {
+        display: flex;
+        -webkit-box-align: center;
+        align-items: center;
+        overflow: auto hidden;
+        -webkit-box-pack: start;
+        justify-content: flex-start;
+        width: 100%;
+        box-sizing: border-box;
+        list-style: none;
+        margin: 0px;
+      }
+      .tab-button {
+        font-style: inherit;
+        font-variant: inherit;
+        font-stretch: inherit;
+        font-family: inherit;
+        background: none transparent;
+        border: none;
+        outline: inherit;
+        height: 100%;
+        display: flex;
+        -webkit-box-pack: center;
+        justify-content: center;
+        -webkit-box-align: center;
+        align-items: center;
+        position: relative;
+        padding: 0.5rem 1.75rem;
+        border-radius: 14px 14px 0px 0px;
+        line-height: 1rem;
+        letter-spacing: 0.9px;
+        font-size: 0.75rem;
+        font-weight: 600;
+        color: rgb(63, 73, 84);
+        z-index: 0;
+        box-sizing: border-box;
+        cursor: pointer;
+        margin: 0px;
+        overflow: visible;
+        text-transform: none;
+        appearance: button;
+      }
+
+      .tab-button:hover {
+        background-color: rgb(246, 247, 249);
+        color: rgb(63, 73, 84);
+        z-index: 1;
+      }
+
+      .tab-button:hover,
+      .tab-button:active,
+      .tab-button:visited {
+        text-decoration: none;
+        outline: 0px;
+        cursor: pointer;
+      }
+      .tab-item:nth-child(1) > button::after {
+        background-color: transparent;
+        box-sizing: border-box;
+      }
+      .tab-button:hover::after {
+        background-color: transparent;
+      }
+      .tab-button::after {
+        content: "";
+        position: absolute;
+        left: -2px;
+        height: 20px;
+        width: 1px;
+        background-color: rgb(215, 217, 226);
+        box-sizing: border-box;
+      }
+      .tab-title {
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+      }
+      .tab-item-active {
+        position: relative;
+        display: flex;
+        -webkit-box-pack: center;
+        justify-content: center;
+        -webkit-box-align: center;
+        align-items: center;
+        height: 2.75rem;
+        background-color: rgb(255, 255, 255);
+        color: rgb(1, 182, 245);
+        border-radius: 14px 14px 0px 0px;
+        z-index: 2;
+        box-shadow: rgba(0, 0, 0, 0.05) 0px 1px 2px;
+        box-sizing: border-box;
+      }
+      .tab-item-active::before {
+        right: -40px;
+        content: "";
+        background: transparent;
+        position: absolute;
+        bottom: -16px;
+        height: 56px;
+        width: 56px;
+        border-radius: 100%;
+        border-width: 16px;
+        border-style: solid;
+        border-color: transparent rgb(255, 255, 255) transparent transparent;
+        transform: rotate(145deg);
+        box-sizing: border-box;
+      }
+      .tab-item-active::before {
+        background: unset;
+        border-width: unset;
+        border-style: unset;
+        border-color: unset;
+        transform: unset;
+        content: "";
+        height: 0.125rem;
+        width: 100%;
+        left: 0px;
+        bottom: 0px;
+        position: absolute;
+        border-radius: 100px;
+        box-sizing: border-box;
+      }
+      .tab-button-active {
+        font-style: inherit;
+        font-variant: inherit;
+        font-stretch: inherit;
+        font-family: inherit;
+        background: none rgb(255, 255, 255);
+        border: none;
+        outline: inherit;
+        height: 100%;
+        display: flex;
+        -webkit-box-pack: center;
+        justify-content: center;
+        -webkit-box-align: center;
+        align-items: center;
+        position: relative;
+        padding: 0.5rem 1.75rem;
+        border-radius: 14px 14px 0px 0px;
+        line-height: 1rem;
+        letter-spacing: 0.9px;
+        font-size: 0.75rem;
+        font-weight: 600;
+        box-sizing: border-box;
+        cursor: pointer;
+        margin: 0px;
+        overflow: visible;
+        text-transform: none;
+        appearance: button;
+        z-index: 2;
+        color: rgb(1, 182, 245);
+        box-shadow: rgb(215, 217, 226) 0px 1px 2px 0px;
+      }
+
+      .tab-button-active:hover {
+        background-color: rgb(246, 247, 249);
+      }
+      .tab-button-active:focus {
+        text-decoration: none;
+        outline: 0px;
+      }
+      .tab-button-active:hover {
+        color: rgb(63, 73, 84);
+        z-index: 1;
+      }
+      .tab-button-active:hover,
+      .tab-button-active:active,
+      .tab-button-active:visited,
+      .tab-button-active:focus {
+        background-color: rgb(255, 255, 255);
+        color: rgb(1, 182, 245);
+      }
+      .tab-button-active:hover,
+      .tab-button-active:active,
+      .tab-button-active:visited {
+        text-decoration: none;
+        outline: 0px;
+        cursor: pointer;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="tab">
+      <ul role="tablist" class="tab-list">
+        <li class="tab-item">
+          <button role="tab" class="tab-button">
+            <span class="tab-title">PRIMARY</span>
+          </button>
+        </li>
+        <li class="tab-item-active">
+          <button role="tab" class="tab-button-active">
+            <span class="tab-title">RECENTS</span>
+          </button>
+        </li>
+        <li class="tab-item">
+          <button role="tab" class="tab-button">
+            <span class="tab-title">SHARED</span>
+          </button>
+        </li>
+      </ul>
+    </div>
+  </body>
+</html>

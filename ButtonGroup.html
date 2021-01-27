@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ButtonGroup</title>
+    <style>
+      .btn-grp-component {
+        margin: 0px;
+        padding: 0px;
+        border: 0px;
+        position: relative;
+        box-sizing: border-box;
+        display: flex;
+        flex-direction: column;
+        -webkit-box-align: center;
+        align-items: center;
+      }
+      .btn-grp-component > legend {
+        color: rgb(63, 73, 84);
+        font-size: 0.875rem;
+        line-height: 1.5;
+        margin-bottom: 0.125rem;
+        align-self: center;
+        box-sizing: border-box;
+        text-align: center;
+        margin-left: 0px;
+        margin-right: 0px;
+        padding: 0px 1rem;
+        border: 0;
+        padding: 0;
+      }
+      .btn-grp {
+        display: inline-flex;
+      }
+      .btn-grp-input {
+        box-sizing: border-box;
+        position: absolute;
+        margin: -1px;
+        border: 0px !important;
+        padding: 0px !important;
+        width: 1px !important;
+        height: 1px !important;
+        overflow: hidden !important;
+        clip: rect(0px, 0px, 0px, 0px) !important;
+        text-transform: none !important;
+        white-space: nowrap !important;
+      }
+      .btn-grp-name {
+        font-style: inherit;
+        font-variant: inherit;
+        font-weight: inherit;
+        font-stretch: inherit;
+        font-family: inherit;
+        -webkit-box-align: center;
+        align-items: center;
+        display: flex;
+        font-size: 1rem;
+        -webkit-box-pack: center;
+        justify-content: center;
+        position: relative;
+        background-clip: border-box;
+        text-decoration: none;
+        padding: 0px 1rem;
+        cursor: pointer;
+        white-space: normal;
+        user-select: none;
+        text-align: center;
+        vertical-align: middle;
+        overflow: visible;
+        text-transform: none;
+        appearance: button;
+        box-sizing: border-box;
+        border-radius: 0px;
+        margin-left: -1px;
+        height: 2.5rem;
+        line-height: 2.5;
+        background-color: rgb(255, 255, 255);
+        border: 1px solid rgb(215, 217, 226);
+        color: rgb(63, 73, 84);
+        transition: border 0.15s linear 0s;
+      }
+      .btn-grp > span:first-child,
+      .btn-grp > label:first-child > span {
+        border-radius: 100px 0 0 100px;
+      }
+      .btn-grp > span:last-child,
+      .btn-grp > label:last-child > span {
+        border-radius: 0 100px 100px 0;
+      }
+      .btn-grp-active {
+        box-shadow: rgb(1, 182, 245) 0px 0px 2px;
+        z-index: 1;
+        color: rgb(0, 163, 220);
+        border: 1px solid rgb(1, 182, 245);
+      }
+    </style>
+  </head>
+  <body>
+    <fieldset class="btn-grp-component">
+      <legend>Select View type:</legend>
+      <div class="btn-grp">
+        <label for="1" class="btn-grp-label">
+          <input type="radio" class="btn-grp-input" name="filter" id="1" />
+          <span class="btn-grp-name btn-grp-active">Month</span>
+        </label>
+        <label for="2" class="btn-grp-label">
+          <input type="radio" class="btn-grp-input" name="filter" id="2" />
+          <span class="btn-grp-name">Week</span></label
+        >
+        <label for="3" class="btn-grp-label"
+          ><input type="radio" class="btn-grp-input" name="filter" id="3" />
+          <span class="btn-grp-name">Day</span>
+        </label>
+      </div>
+    </fieldset>
+  </body>
+</html>

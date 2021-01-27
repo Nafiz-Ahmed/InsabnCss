@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Textarea</title>
+    <style>
+      .textarea {
+        border-radius: 0.875rem;
+        background-color: transparent;
+
+        outline: 0;
+        width: 100%;
+        padding: 0.625rem 1rem;
+        resize: none;
+        font-size: 1rem;
+        line-height: 1.57;
+        color: rgb(42, 48, 57);
+        box-sizing: border-box;
+        margin: 0px;
+        overflow: auto;
+      }
+      .textarea:focus,
+      .textarea:active {
+        outline: 0px;
+        border: 1px solid rgb(1, 182, 245);
+        box-shadow: rgb(1, 182, 245) 0px 0px 2px;
+        border-radius: 0.875rem;
+        transition: all 0.1s linear 0s, padding 0s ease 0s, border 0s ease 0s;
+      }
+    </style>
+  </head>
+  <body>
+    <textarea
+      id="textarea-65"
+      placeholder="Placeholder Text"
+      rows="4"
+      class="textarea"
+    ></textarea>
+  </body>
+</html>

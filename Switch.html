@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Switch</title>
+    <style>
+      .swtich-label {
+        display: inline-flex;
+        flex-direction: row;
+        -webkit-box-align: center;
+        align-items: center;
+        box-sizing: border-box;
+      }
+      .checkbox-switch-input {
+        box-sizing: border-box;
+        position: absolute !important;
+        margin: -1px !important;
+        border: 0px !important;
+        padding: 0px !important;
+        width: 1px !important;
+        height: 1px !important;
+        overflow: hidden !important;
+        clip: rect(0px, 0px, 0px, 0px) !important;
+        text-transform: none !important;
+        white-space: nowrap !important;
+      }
+      .swtich-label [type="checkbox"] + .switch {
+        font-size: 0.625rem;
+        color: rgb(215, 217, 226);
+      }
+      .swtich-label .rainbow-checkbox-toggle_faux {
+        display: block;
+        width: 2.75rem;
+        height: 1.5rem;
+        padding: 0.125rem;
+        transition: all 0.3s cubic-bezier(0.75, 0, 0.08, 1) 0s;
+        border-radius: 1rem;
+        border: 0.125rem solid rgb(215, 217, 226);
+        background-color: rgb(215, 217, 226);
+        position: relative;
+        box-sizing: border-box;
+      }
+      .swtich-label .rainbow-checkbox-toggle_faux::after {
+        content: "";
+        top: 0px;
+        bottom: 0px;
+        margin: auto;
+        left: 0.015625rem;
+        width: 1.25rem;
+        height: 1.25rem;
+        box-shadow: rgb(164, 167, 181) 0px 0px 2px 0px;
+        transition: all 0.3s cubic-bezier(0.75, 0, 0.08, 1) 0s;
+        border-radius: 1rem;
+        border: 0.125rem solid transparent;
+        background-color: rgb(255, 255, 255);
+        position: absolute;
+        box-sizing: border-box;
+      }
+      .switch-text {
+        color: rgb(42, 48, 57);
+        font-size: 0.875rem;
+        margin-left: 0.75rem;
+      }
+      .swtich-label
+        [type="checkbox"]:checked
+        + .rainbow-checkbox-toggle_faux::after,
+      .swtich-label
+        [type="checkbox"]:checked
+        ~ .rainbow-checkbox-toggle_faux::after,
+      .swtich-label
+        [type="checkbox"]:checked
+        + .switch
+        .rainbow-checkbox-toggle_faux::after {
+        box-shadow: transparent 0px 0px 0px 0px;
+        transition: all 0.3s cubic-bezier(0.75, 0, 0.08, 1) 0s;
+        transform: translateX(20px);
+        box-sizing: border-box;
+      }
+      .swtich-label [type="checkbox"]:checked + .rainbow-checkbox-toggle_faux,
+      .swtich-label [type="checkbox"]:checked ~ .rainbow-checkbox-toggle_faux,
+      .swtich-label
+        [type="checkbox"]:checked
+        + .switch
+        .rainbow-checkbox-toggle_faux {
+        border-color: rgb(0, 163, 220);
+        background-color: rgb(1, 182, 245);
+      }
+    </style>
+  </head>
+  <body>
+    <label id="checkbox-toggle-component-1" class="swtich-label"
+      ><input
+        type="checkbox"
+        name="checkbox-toggle-81"
+        class="checkbox-switch-input"
+        value="checkbox-toggle-81"
+      />
+      <span id="checkbox-toggle-81" class="switch"
+        ><span class="rainbow-checkbox-toggle_faux"></span></span
+      ><span class="switch-text">Toggle Label</span></label
+    >
+  </body>
+</html>

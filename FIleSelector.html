@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>File Selector</title>
+    <style>
+      .file-selector {
+        position: relative;
+        width: 100%;
+        height: 2.5rem;
+        padding: 4px;
+        border: 1px dashed rgb(215, 217, 226);
+        border-radius: 12rem;
+        background-color: rgb(246, 247, 249);
+        color: rgb(42, 48, 57);
+        display: flex;
+        flex-direction: column;
+        -webkit-box-pack: center;
+        justify-content: center;
+        -webkit-box-align: center;
+        align-items: center;
+      }
+      .file-input {
+        position: absolute;
+        top: 0px;
+        left: 0px;
+        width: 100%;
+        height: 100%;
+        opacity: 0;
+        cursor: pointer;
+        pointer-events: auto;
+      }
+      .custom-file-input {
+        width: 100%;
+        height: 100%;
+        display: flex;
+        -webkit-box-pack: center;
+        justify-content: center;
+        -webkit-box-align: center;
+        align-items: center;
+        padding-left: 2.35rem;
+        padding-right: 1rem;
+        border-radius: 12rem;
+        pointer-events: none;
+      }
+      .custom-file-input-icon {
+        color: rgb(164, 167, 181);
+        height: 100%;
+        width: 22px;
+        top: 0px;
+        position: absolute;
+        line-height: 1;
+        border: 0px;
+        z-index: 2;
+        display: flex;
+        -webkit-box-align: center;
+        align-items: center;
+        -webkit-box-pack: center;
+        justify-content: center;
+        left: 0.8rem;
+      }
+      .custom-multiline-file-input-icon {
+        position: static;
+        width: 64px;
+        height: auto;
+        margin-bottom: 0.5rem;
+      }
+      .custom-file-input-icon:not(button) {
+        pointer-events: none;
+      }
+      .custom-file-input-text {
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        max-width: 100%;
+        pointer-events: none;
+      }
+      .custom-file-input-icon svg {
+        color: rgb(1, 182, 245);
+        width: 24px !important;
+        height: 24px !important;
+        font-size: 24px !important;
+      }
+      .custom-multiline-file-input-icon svg {
+        width: 64px !important;
+        height: 64px !important;
+        font-size: 64px !important;
+      }
+
+      .multiline-file-selector {
+        height: 2.5rem;
+        min-height: 12rem;
+        border-radius: 27px;
+        height: 100%;
+      }
+      .custom-multiline-file-input {
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+        font-size: 0.875rem;
+        padding: 1rem;
+        background: transparent;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="dropzone" class="file-selector">
+      <input type="file" class="file-input" />
+      <div class="custom-file-input">
+        <span class="custom-file-input-icon"
+          ><svg width="64" height="48" viewBox="0 0 64 48">
+            <g fill="none">
+              <path
+                fill="currentColor"
+                d="M49.903 18.963c-1.506 0-3.005.245-4.426.719.288-1.21.433-2.452.433-3.713C45.91 7.164 38.747 0 29.942 0c-8.512 0-15.49 6.693-15.946 15.093C6.077 16.07 0 22.862 0 30.94c0 8.805 7.164 15.968 15.969 15.968h33.934c7.704 0 13.972-6.268 13.972-13.972 0-7.705-6.268-13.973-13.972-13.973z"
+              ></path>
+              <path
+                fill="#000"
+                fill-opacity=".102"
+                d="M50.9 44.912H16.968C8.162 44.912.998 37.75.998 28.943c0-2.15.43-4.208 1.212-6.09C.805 25.233 0 28 0 30.94c0 8.805 7.164 15.968 15.969 15.968h33.934c5.862 0 10.892-3.63 12.963-8.76-2.45 4.051-6.897 6.764-11.965 6.764z"
+              ></path>
+              <path
+                fill="#FFF"
+                d="M38.133 27.24l-6.987-6.987c-.39-.39-1.021-.39-1.411 0l-6.987 6.987c-.616.616-.162 1.703.706 1.703h1.996v9.981c0 .551.447.998.998.998h7.985c.55 0 .998-.447.998-.998v-9.98h1.996c.868 0 1.322-1.088.706-1.704z"
+              ></path>
+            </g></svg
+        ></span>
+        <span class="custom-file-input-text"
+          >Drag &amp; Drop or Click to Browse</span
+        >
+      </div>
+    </div>
+    
+<!-- Multiline -->
+    <div class="file-selector multiline-file-selector">
+      <input type="file" class="file-input" />
+      <div class="custom-file-input custom-multiline-file-input">
+        <span class="custom-file-input-icon custom-multiline-file-input-icon"
+          ><svg width="64" height="48" viewBox="0 0 64 48">
+            <g fill="none">
+              <path
+                fill="currentColor"
+                d="M49.903 18.963c-1.506 0-3.005.245-4.426.719.288-1.21.433-2.452.433-3.713C45.91 7.164 38.747 0 29.942 0c-8.512 0-15.49 6.693-15.946 15.093C6.077 16.07 0 22.862 0 30.94c0 8.805 7.164 15.968 15.969 15.968h33.934c7.704 0 13.972-6.268 13.972-13.972 0-7.705-6.268-13.973-13.972-13.973z"
+              ></path>
+              <path
+                fill="#000"
+                fill-opacity=".102"
+                d="M50.9 44.912H16.968C8.162 44.912.998 37.75.998 28.943c0-2.15.43-4.208 1.212-6.09C.805 25.233 0 28 0 30.94c0 8.805 7.164 15.968 15.969 15.968h33.934c5.862 0 10.892-3.63 12.963-8.76-2.45 4.051-6.897 6.764-11.965 6.764z"
+              ></path>
+              <path
+                fill="#FFF"
+                d="M38.133 27.24l-6.987-6.987c-.39-.39-1.021-.39-1.411 0l-6.987 6.987c-.616.616-.162 1.703.706 1.703h1.996v9.981c0 .551.447.998.998.998h7.985c.55 0 .998-.447.998-.998v-9.98h1.996c.868 0 1.322-1.088.706-1.704z"
+              ></path>
+            </g></svg></span
+        ><span class="custom-file-input-text">Drag &amp; Drop or Click to Browse</span>
+      </div>
+    </div>
+  </body>
+</html>

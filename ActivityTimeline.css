@@ -1,0 +1,60 @@
+.ActivityTimeline {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+.ActivityTimeline-Item {
+  display: flex;
+}
+.ActivityTimeline-Avatar {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  position: relative;
+}
+.ActivityTimeline-Avatar::after {
+  content: "";
+  height: 100%;
+  width: 1px;
+  position: absolute;
+  background: rgba(0, 0, 0, 0.1);
+  right: 50%;
+  left: 50%;
+}
+.ActivityTimeline-Avatar-img {
+  z-index: 1;
+  min-width: 2rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.ActivityTimeline-content {
+  width: 100%;
+  margin: 0 0 1.5rem 1rem;
+}
+.ActivityTimeline-content-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.ActivityTimeline-content-header-name {
+  margin: 0;
+  padding: 0;
+  font-size: 1rem;
+  color: rgb(42, 48, 57);
+}
+.ActivityTimeline-content-header-day {
+  color: rgb(164, 167, 181);
+  font-size: 0.875rem;
+  margin: 0 0 0 0.75rem;
+  padding: 0;
+}
+.ActivityTimeline-content-details {
+  font-size: 0.875rem;
+  padding: 0.5rem 0px;
+  margin: 0;
+  color: rgb(63, 73, 84);
+}

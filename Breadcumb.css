@@ -1,0 +1,50 @@
+.Breadcumb {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+.Breadcumb-button {
+  font-family: initial;
+  font-variant: initial;
+  font-stretch: initial;
+  font-weight: initial;
+  font-family: inherit;
+  line-height: initial;
+  background: none;
+  border: none;
+  padding: 0;
+  outline: inherit;
+  appearance: button;
+  letter-spacing: 0.3px;
+  cursor: pointer;
+  font-size: 0.875rem;
+  margin: 0px;
+  text-transform: none;
+  color: rgb(63, 73, 84);
+}
+.Breadcumb-button::after {
+  display: block;
+  content: "";
+  border-bottom: 2px solid rgb(1, 182, 245);
+  transform: scale(0);
+  transition: transform 250ms ease-in-out 0s;
+}
+.Breadcumb-button:hover {
+  color: rgb(1, 182, 245);
+}
+.Breadcumb-button:hover::after {
+  transform: scale(1);
+}
+.Breadcumb > li:not(:first-child)::before {
+  margin: 1px 10px;
+  content: ">";
+  color: rgb(63, 73, 84);
+}
+.Breadcumb > li:last-child > button {
+  font-weight: 900;
+  color: rgb(42, 48, 57);
+  pointer-events: none;
+}

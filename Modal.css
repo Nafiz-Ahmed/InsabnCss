@@ -1,0 +1,56 @@
+.modal-overlay {
+  top: 0px;
+  right: 0px;
+  bottom: 0px;
+  left: 0px;
+  width: 100%;
+  height: 100%;
+  background: rgba(239, 241, 245, 0.64);
+  display: flex;
+  -webkit-box-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  align-items: center;
+  position: fixed;
+  transition: opacity 0.3s linear 0s, z-index 0.3s linear 0s;
+  visibility: visible;
+  z-index: 1000000;
+  opacity: 1;
+  backdrop-filter: blur(5px);
+}
+.modal {
+  top: 0px;
+  right: 0px;
+  bottom: 0px;
+  left: 0px;
+  width: 55%;
+  min-width: 18rem;
+
+  max-height: 80vh;
+  min-height: 4rem;
+  background-color: rgb(255, 255, 255);
+  color: rgb(42, 48, 57);
+  border-radius: 0.875rem;
+  box-shadow: rgb(215, 217, 226) 0px 2px 4px 0px;
+  flex-direction: column;
+  box-sizing: border-box;
+  display: flex;
+  -webkit-box-pack: center;
+  justify-content: center;
+  align-items: normal;
+  position: relative;
+  animation: 0.2s linear 0s 1 normal none running slide-up-in;
+  opacity: 1;
+  transform: scale(1, 1) translateY(0px);
+}
+.close {
+  position: absolute;
+  padding: 0.5rem 0.5rem;
+  top: 0.5rem;
+  right: 0.5rem;
+  z-index: 1000002;
+  color: rgb(164, 167, 181);
+}
+.close:hover {
+  color: rgb(0, 163, 220);
+}

@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Buttons</title>
+    <style>
+      .button {
+        -webkit-box-align: center;
+        align-items: center;
+        display: inline-flex;
+        -webkit-box-pack: center;
+        justify-content: center;
+        position: relative;
+        color: rgb(1, 182, 245);
+        cursor: pointer;
+        white-space: normal;
+        user-select: none;
+        text-align: center;
+        vertical-align: middle;
+        text-transform: none;
+        appearance: button;
+        box-sizing: border-box;
+        font: inherit inherit inherit inherit inherit inherit inherit inherit;
+        background: border-box transparent;
+        border-width: 1px;
+        border-style: solid;
+        border-color: transparent;
+        border-image: initial;
+        border-radius: 100px;
+        text-decoration: none;
+        padding: 0.5rem 1rem;
+        transition: border 0.15s linear 0s;
+        overflow: visible;
+      }
+      .button:focus {
+        outline: 0px;
+        box-shadow: rgb(1, 182, 245) 0px 0px 2px;
+      }
+      .button:hover,
+      .button:focus {
+        color: rgb(0, 163, 220);
+      }
+      .button:hover,
+      .button:focus,
+      .button:active,
+      .button:visited {
+        text-decoration: none;
+      }
+      .button-outlined {
+        border-width: 1px;
+        border-style: solid;
+        border-color: rgb(1, 182, 245);
+        border-image: initial;
+      }
+      .button-border {
+        border-width: 1px;
+        color: #000000;
+        border-style: solid;
+        border-color: rgb(215, 217, 226);
+        border-image: initial;
+        transition: border 0.15s linear 0s;
+      }
+      .button-icon {
+        display: inline-block;
+        font-size: inherit;
+        height: 1em;
+        width: 1.25em;
+        overflow: visible;
+        vertical-align: -0.125em;
+        margin: 0.5rem;
+      }
+      
+      .button-icon-rounded {
+        padding: 0.2rem;
+      }
+    </style>
+  </head>
+  <body>
+    <button class="button" type="button">Button Base</button>
+    <button class="button button-outlined" type="button">
+      Button Outline Brand
+    </button>
+    <button class="button button-border" type="button">
+      Button Outline Brand
+    </button>
+
+    <button class="button" type="button">
+      <svg
+        aria-hidden="true"
+        focusable="false"
+        data-prefix="fas"
+        data-icon="coffee"
+        class="button-icon"
+        role="img"
+        xmlns="http://www.w3.org/2000/svg"
+        viewBox="0 0 640 512"
+      >
+        <path
+          fill="currentColor"
+          d="M192 384h192c53 0 96-43 96-96h32c70.6 0 128-57.4 128-128S582.6 32 512 32H120c-13.3 0-24 10.7-24 24v232c0 53 43 96 96 96zM512 96c35.3 0 64 28.7 64 64s-28.7 64-64 64h-32V96h32zm47.7 384H48.3c-47.6 0-61-64-36-64h583.3c25 0 11.8 64-35.9 64z"
+        ></path>
+      </svg>
+      Button Base
+    </button>
+  </body>
+</html>

@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="root.css" />
+    <style>
+      body {
+        margin: 20px;
+      }
+      .accordion {
+        position: relative;
+        background-color: #fff;
+        color: rgba(42, 48, 57);
+        border: 0.0625rem solid rgb(215, 217, 226);
+        border-radius: 0.875rem;
+        background-clip: padding-box;
+        box-shadow: rgb(215, 217, 226) 0px 1px;
+        overflow: hidden;
+      }
+      .accordion:hover {
+        box-shadow: rgb(215, 217, 226) 0px 2px 12px 0px;
+        transition: all 150ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
+      }
+      .accordion-header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 0.875rem 1rem;
+      }
+      .accordion-title {
+        font-size: 1rem;
+        font-weight: inherit;
+        line-height: 1.25;
+        width: 100%;
+        margin: 0;
+        padding: 0;
+        color: rgb(42, 48, 57);
+      }
+      .accodion-icon {
+        margin-right: 0.5rem;
+      }
+      .accodion-icon-svg {
+        width: 1rem;
+        color: #01b6f5;
+        display: inline-block;
+        font-size: inherit;
+        height: 1rem;
+        vertical-align: -0.125em;
+      }
+      .accordion-arrow {
+        display: inline-flex;
+        justify-content: center;
+        align-items: center;
+        position: relative;
+        cursor: pointer;
+        white-space: normal;
+        user-select: none;
+        vertical-align: middle;
+        text-transform: none;
+        appearance: button;
+        width: 1.65rem;
+        height: 1.65rem;
+        color: rgb(63, 73, 84);
+        padding: 0;
+        background: border-box transparent;
+        border-width: 0;
+        border-radius: 12rem;
+        text-decoration: none;
+        overflow: visible;
+      }
+      .accordion-arrow:focus {
+        outline: none;
+        box-shadow: rgb(1, 182, 220) 0px 0px 2px;
+      }
+      .accordion-arrow:hover,
+      .accordion-arrow:focus,
+      .accordion-arrow:active {
+        color: rgb(0, 163, 220);
+      }
+      .accordion-arrow svg {
+        width: 0.65rem;
+        height: 0.65rem;
+        font-size: 0.65rem;
+      }
+      .accordion-arrow-icon {
+        fill: rgb(1, 182, 245);
+        vertical-align: middle;
+        transform: rotate(-180deg);
+        transition: transform 0.15s linear 0s;
+      }
+      .accordion-details {
+        display: block;
+        font-size: 0.875rem;
+        font-weight: 500;
+        line-height: 1.57;
+        transition: all 0.3s linear 0s;
+        padding: 0 2rem 0.875rem 1rem;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="accordion">
+      <ul>
+        <li class="accordion-section">
+          <div class="accordion-header">
+            <h3 class="accordion-title">
+              <span class="accordion-icon">
+                <svg
+                  aria-hidden="true"
+                  focusable="false"
+                  data-prefix="fas"
+                  data-icon="cog"
+                  class="accodion-icon-svg"
+                  role="img"
+                  xmlns="http://www.w3.org/2000/svg"
+                  viewBox="0 0 512 512"
+                >
+                  <path
+                    fill="currentColor"
+                    d="M487.4 315.7l-42.6-24.6c4.3-23.2 4.3-47 0-70.2l42.6-24.6c4.9-2.8 7.1-8.6 5.5-14-11.1-35.6-30-67.8-54.7-94.6-3.8-4.1-10-5.1-14.8-2.3L380.8 110c-17.9-15.4-38.5-27.3-60.8-35.1V25.8c0-5.6-3.9-10.5-9.4-11.7-36.7-8.2-74.3-7.8-109.2 0-5.5 1.2-9.4 6.1-9.4 11.7V75c-22.2 7.9-42.8 19.8-60.8 35.1L88.7 85.5c-4.9-2.8-11-1.9-14.8 2.3-24.7 26.7-43.6 58.9-54.7 94.6-1.7 5.4.6 11.2 5.5 14L67.3 221c-4.3 23.2-4.3 47 0 70.2l-42.6 24.6c-4.9 2.8-7.1 8.6-5.5 14 11.1 35.6 30 67.8 54.7 94.6 3.8 4.1 10 5.1 14.8 2.3l42.6-24.6c17.9 15.4 38.5 27.3 60.8 35.1v49.2c0 5.6 3.9 10.5 9.4 11.7 36.7 8.2 74.3 7.8 109.2 0 5.5-1.2 9.4-6.1 9.4-11.7v-49.2c22.2-7.9 42.8-19.8 60.8-35.1l42.6 24.6c4.9 2.8 11 1.9 14.8-2.3 24.7-26.7 43.6-58.9 54.7-94.6 1.5-5.5-.7-11.3-5.6-14.1zM256 336c-44.1 0-80-35.9-80-80s35.9-80 80-80 80 35.9 80 80-35.9 80-80 80z"
+                  ></path>
+                </svg>
+              </span>
+              <span class="accordion-label">General Settings</span>
+            </h3>
+            <button class="accordion-arrow">
+              <svg
+                width="10px"
+                height="7px"
+                viewBox="0 0 10 7"
+                version="1.1"
+                aria-hidden="true"
+                id="arrow-icon"
+                class="accordion-arrow-icon"
+              >
+                <title>angle-down</title>
+                <g
+                  id="angle-down"
+                  transform="translate(-7.000000, -9.000000)"
+                  fill-rule="nonzero"
+                >
+                  <path
+                    d="M7.21962617,10.9797508 C6.92679128,10.6869159 6.92679128,10.2133956 7.21962617,9.92367601 L7.92367601,9.21962617 C8.2165109,8.92679128 8.69003115,8.92679128 8.97975078,9.21962617 L11.982866,12.2227414 L14.9859813,9.21962617 C15.2788162,8.92679128 15.7523364,8.92679128 16.0420561,9.21962617 L16.7461059,9.92367601 C17.0389408,10.2165109 17.0389408,10.6900312 16.7461059,10.9797508 L12.5093458,15.2165109 C12.2227414,15.5093458 11.7492212,15.5093458 11.4563863,15.2165109 L7.21962617,10.9797508 Z"
+                    id="arrow"
+                  ></path>
+                </g>
+              </svg>
+            </button>
+          </div>
+          <div class="accordion-details">
+            A rainbow is a meteorological phenomenon that is caused by
+            reflection, refraction and dispersion of light in water droplets
+            resulting in a spectrum of light appearing in the sky.
+          </div>
+        </li>
+      </ul>
+    </div>
+  </body>
+</html>
